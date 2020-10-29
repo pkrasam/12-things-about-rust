@@ -8,6 +8,12 @@ a simple program to quickly go over 12 things in rust
 4. constants
 5. types
 6. strings
+7. tuples
+8. a
+9. b
+10. c
+11. d
+12. e
 
 
 ## Code & Output
@@ -136,6 +142,72 @@ spock length and is_empty is 10, false
 bytes of spock is [118, 117, 108, 99, 97, 110, 240, 159, 150, 150]
 hello before is helloworld!
 hello after is hello,world!
+```
+
+**tuples**\
+c:
+```rust
+fn main() {
+    // tuples
+    println!("tuples");
+    let tup1: (i32, f64, u8, f32) = (500, 6.4, 1, 29.29);
+    let tup2 = (1500, 3.4);
+    println!("tup1 and tup2 is {:?}, {:?}", tup1, tup2);
+    let (a, b, c, d) = tup1;
+    println!("a, b, c, d is {}, {}, {}, {}", a, b, c, d);
+    let five_hundred = tup1.0;
+    let six_point_four = tup1.1;
+    let one = tup1.2;
+    let twenty_nine_dot_twenty_nine = tup1.3;
+    println!("extracting values from tuples {}, {}, {}, {}", five_hundred, six_point_four, one, twenty_nine_dot_twenty_nine);
+}
+```
+o:
+```
+tuples
+tup1 and tup2 is (500, 6.4, 1, 29.29), (1500, 3.4)
+a, b, c, d is 500, 6.4, 1, 29.29
+extracting values from tuples 500, 6.4, 1, 29.29
+```
+
+**n**\
+c:
+```rust
+fn main() {
+}
+```
+o:
+```
+```
+
+**n**\
+c:
+```rust
+fn main() {
+}
+```
+o:
+```
+```
+
+**n**\
+c:
+```rust
+fn main() {
+}
+```
+o:
+```
+```
+
+**n**\
+c:
+```rust
+fn main() {
+}
+```
+o:
+```
 ```
 
 **n**\
