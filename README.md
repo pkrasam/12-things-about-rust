@@ -13,7 +13,7 @@ a simple program to quickly go over 12 things in rust
 9. expressions and statements
 10. functions
 11. loop and while
-12. e
+12. for loop
 
 
 ## Code & Output
@@ -279,13 +279,33 @@ factorial is 120
 c:
 ```rust
 fn main() {
+    // loop and while
+    println!("loop and while");
+    let mut counter = 0;
+    let result = loop {
+        counter += 1;
+        if counter == 10 {
+            break counter * 2
+        }
+    };
+    println!("result is {}", result);
+    counter = 3;
+    while counter != 0 {
+        println!("counter is {}", counter);
+        counter -= 1;
+    }
 }
 ```
 o:
 ```
+loop and while
+result is 20
+counter is 3
+counter is 2
+counter is 1
 ```
 
-**n**\
+**for loop**\
 c:
 ```rust
 fn main() {
