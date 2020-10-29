@@ -1,3 +1,5 @@
+#[allow(unused_variables)]
+#[allow(unused_parens)]
 fn main() {
     // println
     println!("println");   
@@ -80,9 +82,77 @@ fn main() {
     let nov = months[10];
     println!("first, last and nov is {}, {}, {}", first, last, nov);
     
-    // abc
-    println!("n");
+    // expressions and statements
+    println!("espressions and statements");
+    let r = 3 + 7;
+    let s = (4 + 6);
+    let t = {5 + 5};
+    let u = {
+        let mut v = 3;
+        v = v * 2;
+        v + 1
+    };
+    println!("r, s, t, u is {}, {}, {}, {}", r, s, t, u);
     
+    // functions
+    println!("functions");
+    let q = five();
+    println!("q is {}", q);
+    let r = plus_one(five());
+    println!("r is {}", r);
+    let oe5 = is_odd(5);
+    let oe6 = is_odd(6);
+    println!("odd 5? 6? {}, {}", oe5, oe6);
+    let td: (f32, f64) = tuple_demo((4, 6, 3));
+    println!("tuple demo is {:?}", td);
+    println!("factorial is {}", factorial(5));
+
+    // loop and while
+    println!("loop and while");
+    let mut counter = 0;
+    let result = loop {
+        counter += 1;
+        if counter == 10 {
+            break counter * 2
+        }
+    };
+    println!("result is {}", result);
+    counter = 3;
+    while counter != 0 {
+        println!("counter is {}", counter);
+        counter -= 1;
+    }
+
     // abc
     println!("n");
+}
+
+fn five() -> i32 {
+    5
+}
+
+fn plus_one(s: i32) -> i32 {
+    s + 1
+}
+
+fn is_odd(x: i32) -> bool {
+    if(x & 1) == 0 {
+        false
+    } else {
+        true
+    }
+}
+
+fn tuple_demo(t: (u8,u16,u32)) -> (f32, f64) {
+    let x:f32 = t.0 as f32 + t.1 as f32;
+    let y:f64 = t.2 as f64;
+    (x, y)
+}
+
+fn factorial(num: u64) -> u64 {
+    match num {
+        0 => 1,
+        1 => 1,
+        _ => factorial (num - 1) * num,
+    }
 }
