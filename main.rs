@@ -57,4 +57,32 @@ fn main() {
     
     // tuples
     println!("tuples");
+    let tup1: (i32, f64, u8, f32) = (500, 6.4, 1, 29.29);
+    let tup2 = (1500, 3.4);
+    println!("tup1 and tup2 is {:?}, {:?}", tup1, tup2);
+    let (a, b, c, d) = tup1;
+    println!("a, b, c, d is {}, {}, {}, {}", a, b, c, d);
+    let five_hundred = tup1.0;
+    let six_point_four = tup1.1;
+    let one = tup1.2;
+    let twenty_nine_dot_twenty_nine = tup1.3;
+    println!("extracting values from tuples {}, {}, {}, {}", five_hundred, six_point_four, one, twenty_nine_dot_twenty_nine);
+    
+    // arrays
+    println!("arrays");
+    let n = [1, 2, 3, 4, 5];
+    let p: [u16; 5] = [6, 7, 8, 9, 10];
+    let q = [0; 5];
+    println!("n, p, q is {:?}, {:?}, {:?}", n, p, q);
+    let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    let first = n[0];
+    let last = p[4];
+    let nov = months[10];
+    println!("first, last and nov is {}, {}, {}", first, last, nov);
+    
+    // abc
+    println!("n");
+    
+    // abc
+    println!("n");
 }
