@@ -170,10 +170,21 @@ a, b, c, d is 500, 6.4, 1, 29.29
 extracting values from tuples 500, 6.4, 1, 29.29
 ```
 
-**n**\
+**arrays**\
 c:
 ```rust
 fn main() {
+    // arrays
+    println!("arrays");
+    let n = [1, 2, 3, 4, 5];
+    let p: [u16; 5] = [6, 7, 8, 9, 10];
+    let q = [0; 5];
+    println!("n, p, q is {:?}, {:?}, {:?}", n, p, q);
+    let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    let first = n[0];
+    let last = p[4];
+    let nov = months[10];
+    println!("first, last and nov is {}, {}, {}", first, last, nov);
 }
 ```
 o:
