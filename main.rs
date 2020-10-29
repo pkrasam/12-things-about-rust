@@ -123,8 +123,15 @@ fn main() {
         counter -= 1;
     }
 
-    // abc
-    println!("n");
+    // for loop
+    println!("for loop");
+    let s = [10, 20, 30, 40, 50];
+    for element in s.iter() {
+        println!("element is {}", element);
+    }
+    for number in (1..5).rev() {
+        println!("number is {}", number);
+    }
 }
 
 fn five() -> i32 {
