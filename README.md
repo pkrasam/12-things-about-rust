@@ -11,7 +11,7 @@ a simple program to quickly go over 12 things in rust
 7. tuples
 8. arrays
 9. expressions and statements
-10. c
+10. functions
 11. d
 12. e
 
@@ -198,13 +198,26 @@ first, last and nov is 1, 10, Nov
 c:
 ```rust
 fn main() {
+    // expressions and statements
+    println!("espressions and statements");
+    let r = 3 + 7;
+    let s = (4 + 6);
+    let t = {5 + 5};
+    let u = {
+        let mut v = 3;
+        v = v * 2;
+        v + 1
+    };
+    println!("r, s, t, u is {}, {}, {}, {}", r, s, t, u);
 }
 ```
 o:
 ```
+espressions and statements
+r, s, t, u is 10, 10, 10, 7
 ```
 
-**n**\
+**functions**\
 c:
 ```rust
 fn main() {
