@@ -45,7 +45,16 @@ fn main() {
     
     // strings
     println!("strings");
+    let spock = "vulcan🖖";
+    println!("spock length and is_empty is {}, {}", spock.len(), spock.is_empty());
+    println!("bytes of spock is {:?}", spock.as_bytes());
+    let mut hello = String::from("hello");
+    hello.push('w');
+    hello.push_str("orld!");
+    println!("hello before is {}", hello);
+    hello.insert(5,',');
+    println!("hello after is {}", hello);
     
-    // abc
-    println!("n");
+    // tuples
+    println!("tuples");
 }
