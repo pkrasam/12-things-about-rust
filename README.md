@@ -12,7 +12,7 @@ a simple program to quickly go over 12 things in rust
 8. arrays
 9. expressions and statements
 10. functions
-11. d
+11. loop and while
 12. e
 
 
@@ -221,13 +221,61 @@ r, s, t, u is 10, 10, 10, 7
 c:
 ```rust
 fn main() {
+    // functions
+    println!("functions");
+    let q = five();
+    println!("q is {}", q);
+    let r = plus_one(five());
+    println!("r is {}", r);
+    let oe5 = is_odd(5);
+    let oe6 = is_odd(6);
+    println!("odd 5? 6? {}, {}", oe5, oe6);
+    let td: (f32, f64) = tuple_demo((4, 6, 3));
+    println!("tuple demo is {:?}", td);
+    println!("factorial is {}", factorial(5));
+}
+
+fn five() -> i32 {
+    5
+}
+
+fn plus_one(s: i32) -> i32 {
+    s + 1
+}
+
+fn is_odd(x: i32) -> bool {
+    if(x & 1) == 0 {
+        false
+    } else {
+        true
+    }
+}
+
+fn tuple_demo(t: (u8,u16,u32)) -> (f32, f64) {
+    let x:f32 = t.0 as f32 + t.1 as f32;
+    let y:f64 = t.2 as f64;
+    (x, y)
+}
+
+fn factorial(num: u64) -> u64 {
+    match num {
+        0 => 1,
+        1 => 1,
+        _ => factorial (num - 1) * num,
+    }
 }
 ```
 o:
 ```
+functions
+q is 5
+r is 6
+odd 5? 6? true, false
+tuple demo is (10.0, 3.0)
+factorial is 120
 ```
 
-**n**\
+**loop and while**\
 c:
 ```rust
 fn main() {
