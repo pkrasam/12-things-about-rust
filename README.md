@@ -309,8 +309,27 @@ counter is 1
 c:
 ```rust
 fn main() {
+    // for loop
+    println!("for loop");
+    let s = [10, 20, 30, 40, 50];
+    for element in s.iter() {
+        println!("element is {}", element);
+    }
+    for number in (1..5).rev() {
+        println!("number is {}", number);
+    }
 }
 ```
 o:
 ```
+for loop
+element is 10
+element is 20
+element is 30
+element is 40
+element is 50
+number is 4
+number is 3
+number is 2
+number is 1
 ```
