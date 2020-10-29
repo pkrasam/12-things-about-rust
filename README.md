@@ -9,8 +9,8 @@ a simple program to quickly go over 12 things in rust
 5. types
 6. strings
 7. tuples
-8. a
-9. b
+8. arrays
+9. expressions and statements
 10. c
 11. d
 12. e
@@ -189,9 +189,12 @@ fn main() {
 ```
 o:
 ```
+arrays
+n, p, q is [1, 2, 3, 4, 5], [6, 7, 8, 9, 10], [0, 0, 0, 0, 0]
+first, last and nov is 1, 10, Nov
 ```
 
-**n**\
+**expressions and statements**\
 c:
 ```rust
 fn main() {
